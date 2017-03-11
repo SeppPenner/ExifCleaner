@@ -62,7 +62,8 @@ namespace ExifRemove.Example
 }
 ```
 
-## Screenshots:
+## Screenshot from the executable:
+![Screenshot from the executable](https://github.com/SeppPenner/ExifCleaner/blob/master/Screenshot_2.JPG "Screenshot from the executable")
 
 Change history
 --------------
