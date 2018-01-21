@@ -6,6 +6,8 @@
 #define MyAppPublisher "Hämmer Electronics"
 #define MyAppURL "www.softwareload24.de.tl"
 #define MyAppExeName "ExifRemove"
+#define MyPath "F:\TODO\C# und VB\ExifRemove\"
+#define MyOutputPath "ExifRemove"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
@@ -16,7 +18,7 @@ AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 VersionInfoProductVersion={#MyAppVersion}
 VersionInfoVersion={#MyAppVersion}
-UninstallDisplayIcon=C:\Users\tim\Desktop\ExifRemove\ExifRemove\ExifRemove.ico
+UninstallDisplayIcon={#MyPath}\ExifRemove\ExifRemove.ico
 ;AppVerName={#MyAppName} {#MyAppVersion}
 AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
@@ -25,10 +27,10 @@ AppUpdatesURL={#MyAppURL}
 DefaultDirName={pf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
-LicenseFile=C:\Users\tim\Desktop\ExifRemove\ExifRemove\bin\Debug\License.txt
-OutputDir=C:\Users\tim\Desktop\ExifRemove\Setup
+LicenseFile={#MyPath}\ExifRemove\bin\Debug\License.txt
+OutputDir={#MyPath}\Setup
 OutputBaseFilename=ExifRemove-Setup
-SetupIconFile=C:\Users\tim\Desktop\ExifRemove\ExifRemove\ExifRemove.ico
+SetupIconFile={#MyPath}\ExifRemove\ExifRemove.ico
 Compression=lzma
 SolidCompression=yes
 
@@ -41,8 +43,8 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 0,6.1
 
 [Files]
-Source: "C:\Users\tim\Desktop\ExifRemove\ExifRemove\bin\Debug\ExifRemove.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\tim\Desktop\ExifRemove\ExifRemove\bin\Debug\License.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#MyPath}\ExifRemove\bin\Debug\ExifRemove.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#MyPath}\ExifRemove\bin\Debug\License.txt"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
