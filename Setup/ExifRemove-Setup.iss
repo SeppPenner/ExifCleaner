@@ -2,11 +2,11 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "ExifRemove"
-#define MyAppVersion "1.0.0.4"
+#define MyAppVersion "1.0.0.5"
 #define MyAppPublisher "Hämmer Electronics"
 #define MyAppURL "www.softwareload24.de.tl"
 #define MyAppExeName "ExifRemove"
-#define MyPath "F:\TODO\C# und VB\ExifRemove\"
+#define MyPath "C:\Users\tim\Desktop\Updaten_Snyk\ExifRemove"
 #define MyOutputPath "ExifRemove"
 
 [Setup]

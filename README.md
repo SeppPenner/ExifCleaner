@@ -1,8 +1,13 @@
 # ExifCleaner
 ExifCleaner is a software/library for C# to clean exif data from images.
-The assembly and executable was written in .Net 4.7.
+The assembly and executable was written in .Net 4.8.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/hoy66w2g8vgsx0ou?svg=true)](https://ci.appveyor.com/project/SeppPenner/exifcleaner)
+[![GitHub issues](https://img.shields.io/github/issues/SeppPenner/ExifCleaner.svg)](https://github.com/SeppPenner/ExifCleaner/issues)
+[![GitHub forks](https://img.shields.io/github/forks/SeppPenner/ExifCleaner.svg)](https://github.com/SeppPenner/ExifCleaner/network)
+[![GitHub stars](https://img.shields.io/github/stars/SeppPenner/ExifCleaner.svg)](https://github.com/SeppPenner/ExifCleaner/stargazers)
+[![GitHub license](https://img.shields.io/badge/license-AGPL-blue.svg)](https://raw.githubusercontent.com/SeppPenner/ExifCleaner/master/License.txt)
+[![Known Vulnerabilities](https://snyk.io/test/github/SeppPenner/ExifCleaner/badge.svg)](https://snyk.io/test/github/SeppPenner/ExifCleaner)
 
 ## Basic usage:
 ```csharp
@@ -68,6 +73,7 @@ namespace ExifRemove.Example
 Change history
 --------------
 
+* **Version 1.0.0.5 (2019-05-07)** : Updated .Net version to 4.8.
 * **Version 1.0.0.4 (2017-03-11)** : Switched to .Net 4.6.2. Cleaned up code. Added images to readme.
 * **Version 1.0.0.3 (2016-12-03)** : Added basic usage to Readme.
 * **Version 1.0.0.3 (2016-09-04)** : Fixed error in "all images" filter in the .exe-file
