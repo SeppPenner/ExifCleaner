@@ -2,11 +2,11 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "ExifRemove"
-#define MyAppVersion "1.0.0.5"
+#define MyAppVersion "1.0.1.0"
 #define MyAppPublisher "Hämmer Electronics"
 #define MyAppURL "www.softwareload24.de.tl"
 #define MyAppExeName "ExifRemove"
-#define MyPath "C:\Users\tim\Desktop\Updaten_Snyk\ExifRemove"
+#define MyPath "C:\Users\Tim\Documents\Git\C# und VB\ExifRemove"
 #define MyOutputPath "ExifRemove"
 
 [Setup]
@@ -24,10 +24,10 @@ AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
-DefaultDirName={pf}\{#MyAppName}
+DefaultDirName={commonpf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
-LicenseFile={#MyPath}\ExifRemove\bin\Debug\License.txt
+LicenseFile={#MyPath}\ExifRemove\bin\Release\License.txt
 OutputDir={#MyPath}\Setup
 OutputBaseFilename=ExifRemove-Setup
 SetupIconFile={#MyPath}\ExifRemove\ExifRemove.ico
@@ -43,8 +43,8 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 0,6.1
 
 [Files]
-Source: "{#MyPath}\ExifRemove\bin\Debug\ExifRemove.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#MyPath}\ExifRemove\bin\Debug\License.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#MyPath}\ExifRemove\bin\Release\ExifRemove.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#MyPath}\ExifRemove\bin\Release\License.txt"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
