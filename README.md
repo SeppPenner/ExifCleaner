@@ -73,6 +73,7 @@ namespace ExifRemove.Example
 Change history
 --------------
 
+* **Version 1.0.1.0 (2019-10-27)** : Updated nuget packages, added GitVersionTask.
 * **Version 1.0.0.5 (2019-05-07)** : Updated .Net version to 4.8.
 * **Version 1.0.0.4 (2017-03-11)** : Switched to .Net 4.6.2. Cleaned up code. Added images to readme.
 * **Version 1.0.0.3 (2016-12-03)** : Added basic usage to Readme.
