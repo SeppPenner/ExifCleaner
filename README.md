@@ -6,7 +6,7 @@ The assembly and executable was written in .Net 4.8.
 [![GitHub issues](https://img.shields.io/github/issues/SeppPenner/ExifCleaner.svg)](https://github.com/SeppPenner/ExifCleaner/issues)
 [![GitHub forks](https://img.shields.io/github/forks/SeppPenner/ExifCleaner.svg)](https://github.com/SeppPenner/ExifCleaner/network)
 [![GitHub stars](https://img.shields.io/github/stars/SeppPenner/ExifCleaner.svg)](https://github.com/SeppPenner/ExifCleaner/stargazers)
-[![GitHub license](https://img.shields.io/badge/license-AGPL-blue.svg)](https://raw.githubusercontent.com/SeppPenner/ExifCleaner/master/License.txt)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://raw.githubusercontent.com/SeppPenner/ExifCleaner/master/License.txt)
 [![Known Vulnerabilities](https://snyk.io/test/github/SeppPenner/ExifCleaner/badge.svg)](https://snyk.io/test/github/SeppPenner/ExifCleaner)
 
 ## Basic usage:
