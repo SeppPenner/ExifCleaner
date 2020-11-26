@@ -6,8 +6,6 @@
 #define MyAppPublisher "Hämmer Electronics"
 #define MyAppURL "www.softwareload24.de.tl"
 #define MyAppExeName "ExifRemove"
-#define MyPath "C:\Users\Tim\Documents\Git\C# und VB\ExifRemove"
-#define MyOutputPath "ExifRemove"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
@@ -18,7 +16,7 @@ AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 VersionInfoProductVersion={#MyAppVersion}
 VersionInfoVersion={#MyAppVersion}
-UninstallDisplayIcon={#MyPath}\ExifRemove\ExifRemove.ico
+UninstallDisplayIcon=..\src\ExifRemove\ExifRemove.ico
 ;AppVerName={#MyAppName} {#MyAppVersion}
 AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
@@ -27,10 +25,10 @@ AppUpdatesURL={#MyAppURL}
 DefaultDirName={commonpf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
-LicenseFile={#MyPath}\ExifRemove\bin\Release\License.txt
-OutputDir={#MyPath}\Setup
+LicenseFile=..\src\ExifRemove\License.txt
+OutputDir=..\Setup
 OutputBaseFilename=ExifRemove-Setup
-SetupIconFile={#MyPath}\ExifRemove\ExifRemove.ico
+SetupIconFile=..\src\ExifRemove\ExifRemove.ico
 Compression=lzma
 SolidCompression=yes
 
@@ -43,8 +41,8 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 0,6.1
 
 [Files]
-Source: "{#MyPath}\ExifRemove\bin\Release\ExifRemove.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#MyPath}\ExifRemove\bin\Release\License.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\src\ExifRemove\bin\Release\net5.0-windows\ExifRemove.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\src\ExifRemove\bin\Release\net5.0-windows\License.txt"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
