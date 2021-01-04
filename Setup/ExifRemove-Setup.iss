@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "ExifRemove"
-#define MyAppVersion "1.0.1.0"
+#define MyAppVersion "1.0.2.0"
 #define MyAppPublisher "Hämmer Electronics"
 #define MyAppURL "www.softwareload24.de.tl"
 #define MyAppExeName "ExifRemove"
@@ -42,6 +42,7 @@ Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescrip
 
 [Files]
 Source: "..\src\ExifRemove\bin\Release\net5.0-windows\ExifRemove.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\src\ExifRemove\bin\Release\net5.0-windows\ExifRemove.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\src\ExifRemove\bin\Release\net5.0-windows\License.txt"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
