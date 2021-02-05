@@ -9,7 +9,7 @@ The assembly and executable was written in .Net 5.0.
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://raw.githubusercontent.com/SeppPenner/ExifCleaner/master/License.txt)
 [![Known Vulnerabilities](https://snyk.io/test/github/SeppPenner/ExifCleaner/badge.svg)](https://snyk.io/test/github/SeppPenner/ExifCleaner)
 
-## Basic usage:
+## Basic usage
 ```csharp
 using System.Collections.ObjectModel;
 using System.Windows;
@@ -67,7 +67,7 @@ namespace ExifRemove.Example
 }
 ```
 
-## Screenshot from the executable:
+## Screenshot from the executable
 ![Screenshot from the executable](https://github.com/SeppPenner/ExifCleaner/blob/master/Screenshot_2.JPG "Screenshot from the executable")
 
 Change history

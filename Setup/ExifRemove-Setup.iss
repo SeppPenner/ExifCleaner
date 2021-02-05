@@ -41,9 +41,7 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 0,6.1
 
 [Files]
-Source: "..\src\ExifRemove\bin\Release\net5.0-windows\ExifRemove.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\src\ExifRemove\bin\Release\net5.0-windows\ExifRemove.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\src\ExifRemove\bin\Release\net5.0-windows\License.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\src\ExifRemove\bin\publish\*"; DestDir: "{app}\languages\"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
