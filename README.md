@@ -1,6 +1,5 @@
 # ExifCleaner
 ExifCleaner is a software/library for C# to clean exif data from images.
-The assembly and executable was written in .Net 5.0.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/hoy66w2g8vgsx0ou?svg=true)](https://ci.appveyor.com/project/SeppPenner/exifcleaner)
 [![GitHub issues](https://img.shields.io/github/issues/SeppPenner/ExifCleaner.svg)](https://github.com/SeppPenner/ExifCleaner/issues)
