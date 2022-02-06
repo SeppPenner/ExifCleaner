@@ -11,7 +11,6 @@ namespace ExifRemove.Gui
 {
     using System;
     using System.Collections.ObjectModel;
-    using System.Diagnostics.CodeAnalysis;
     using System.IO;
     using System.Reflection;
     using System.Windows;
@@ -26,20 +25,17 @@ namespace ExifRemove.Gui
     /// <summary>
     /// The exif remover form.
     /// </summary>
-    [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed. Suppression is OK here.")]
     public partial class ExifRemover
     {
         /// <summary>
         /// The exif items.
         /// </summary>
-        [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed. Suppression is OK here.")]
-        private readonly ObservableCollection<ExifItem> exifItems = new ObservableCollection<ExifItem>();
+        private readonly ObservableCollection<ExifItem> exifItems = new ();
 
         /// <summary>
         /// The exif cleaner.
         /// </summary>
-        [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed. Suppression is OK here.")]
-        private IExifCleaner cleaner;
+        private IExifCleaner? cleaner;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ExifRemover"/> class.
@@ -66,6 +62,11 @@ namespace ExifRemove.Gui
         /// </summary>
         private void InitializeHandlers()
         {
+            if (cleaner is null)
+            {
+                return;
+            }
+
             this.cleaner.ExifCleanCompleted += this.HandleCleanCompleted;
             this.cleaner.ExifCleanProgress += this.HandleCleanProcess;
             this.cleaner.ExceptionThrown += HandleExceptionThrown;
@@ -125,7 +126,7 @@ namespace ExifRemove.Gui
                     new ExifItem(
                         Path.GetExtension(file),
                         Path.GetFileNameWithoutExtension(file),
-                        Path.GetDirectoryName(file),
+                        Path.GetDirectoryName(file) ?? string.Empty,
                         file));
             }
 

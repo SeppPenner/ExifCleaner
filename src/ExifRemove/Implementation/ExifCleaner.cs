@@ -26,31 +26,28 @@ namespace ExifRemove.Implementation
     /// The exif cleaner class.
     /// </summary>
     /// <seealso cref="IExifCleaner"/>
-    [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed. Suppression is OK here.")]
     public class ExifCleaner : IExifCleaner
     {
         /// <summary>
         /// The background worker.
         /// </summary>
-        private readonly BackgroundWorker backgroundWorker = new BackgroundWorker { WorkerReportsProgress = true };
+        private readonly BackgroundWorker backgroundWorker = new() { WorkerReportsProgress = true };
 
         /// <summary>
         /// The exif items.
         /// </summary>
-        [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed. Suppression is OK here.")]
-        private readonly ObservableCollection<ExifItem> exifItems;
+        private readonly ObservableCollection<ExifItem> exifItems = new();
 
         /// <summary>
         /// The output path.
         /// </summary>
-        private readonly string outputPath;
+        private readonly string outputPath = string.Empty;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ExifCleaner"/> class.
         /// </summary>
         /// <param name="outputPath">The output path.</param>
         /// <param name="exifItems">The exif items.</param>
-        [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed. Suppression is OK here.")]
         public ExifCleaner(string outputPath, ObservableCollection<ExifItem> exifItems)
         {
             this.outputPath = outputPath;
@@ -62,21 +59,21 @@ namespace ExifRemove.Implementation
         /// The exif clean completed event handler.
         /// </summary>
         /// <seealso cref="IExifCleaner"/>
-        public event EventHandler<ExifCleanCompletedEventArgs> ExifCleanCompleted;
+        public event EventHandler<ExifCleanCompletedEventArgs>? ExifCleanCompleted;
 
         /// <inheritdoc cref="IExifCleaner"/>
         /// <summary>
         /// The exif clean progress event handler.
         /// </summary>
         /// <seealso cref="IExifCleaner"/>
-        public event EventHandler<ExifCleanProgressEventArgs> ExifCleanProgress;
+        public event EventHandler<ExifCleanProgressEventArgs>? ExifCleanProgress;
 
         /// <inheritdoc cref="IExifCleaner"/>
         /// <summary>
         /// The exception thrown event handler.
         /// </summary>
         /// <seealso cref="IExifCleaner"/>
-        public event EventHandler<ExceptionThrownEventArgs> ExceptionThrown;
+        public event EventHandler<ExceptionThrownEventArgs>? ExceptionThrown;
 
         /// <inheritdoc cref="IExifCleaner"/>
         /// <summary>
@@ -93,10 +90,10 @@ namespace ExifRemove.Implementation
         /// </summary>
         /// <param name="item">The exif item.</param>
         /// <returns>A new <see cref="BitmapEncoder"/>.</returns>
-        private static BitmapEncoder GetEncoderFromItem(ExifItem item)
+        private static BitmapEncoder? GetEncoderFromItem(ExifItem item)
         {
             var extension = item.Extension.ToLowerInvariant();
-            BitmapEncoder bitmapEncoder = null;
+            BitmapEncoder? bitmapEncoder = null;
 
             if (extension.Equals(".jpeg") || extension.Equals(".jpg"))
             {
@@ -196,8 +193,13 @@ namespace ExifRemove.Implementation
                 () => { path = Path.Combine(this.outputPath, item.Name) + item.Extension; });
 
             var bitmapEncoder = GetEncoderFromItem(item);
-            bitmapEncoder.Frames.Add(BitmapFrame.Create(source));
 
+            if (bitmapEncoder is null)
+            {
+                throw new InvalidOperationException("The bitmap encode is null.");
+            }
+
+            bitmapEncoder.Frames.Add(BitmapFrame.Create(source));
             using var fileStream = new FileStream(path, FileMode.Create);
             bitmapEncoder.Save(fileStream);
         }
