@@ -10,14 +10,12 @@
 namespace ExifRemove.Interfaces
 {
     using System;
-    using System.Diagnostics.CodeAnalysis;
 
     using ExifRemove.Events;
 
     /// <summary>
     /// The exif cleaner interface.
     /// </summary>
-    [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed. Suppression is OK here.")]
     public interface IExifCleaner
     {
         /// <summary>

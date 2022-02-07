@@ -10,14 +10,12 @@
 namespace ExifRemove.Events
 {
     using System;
-    using System.Diagnostics.CodeAnalysis;
 
     /// <inheritdoc cref="EventArgs"/>
     /// <summary>
     /// The exif clean completed event args.
     /// </summary>
     /// <seealso cref="EventArgs"/>
-    [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed. Suppression is OK here.")]
     public class ExifCleanCompletedEventArgs : EventArgs
     {
         /// <summary>
