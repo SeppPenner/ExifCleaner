@@ -1,4 +1,4 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="ExifCleanProgressEventArgs.cs" company="Hämmer Electronics">
 //   Copyright (c) All rights reserved.
 // </copyright>
@@ -7,29 +7,26 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace ExifRemove.Events
+namespace ExifRemove.Events;
+
+/// <inheritdoc cref="EventArgs"/>
+/// <summary>
+/// The exif clean progress event args.
+/// </summary>
+/// <seealso cref="EventArgs"/>
+public class ExifCleanProgressEventArgs : EventArgs
 {
-    using System;
-
-    /// <inheritdoc cref="EventArgs"/>
     /// <summary>
-    /// The exif clean progress event args.
+    /// Initializes a new instance of the <see cref="ExifCleanProgressEventArgs"/> class.
     /// </summary>
-    /// <seealso cref="EventArgs"/>
-    public class ExifCleanProgressEventArgs : EventArgs
+    /// <param name="message">The message.</param>
+    public ExifCleanProgressEventArgs(string message)
     {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ExifCleanProgressEventArgs"/> class.
-        /// </summary>
-        /// <param name="message">The message.</param>
-        public ExifCleanProgressEventArgs(string message)
-        {
-            this.Message = message;
-        }
-
-        /// <summary>
-        /// Gets or sets the message.
-        /// </summary>
-        public string Message { get; set; }
+        this.Message = message;
     }
+
+    /// <summary>
+    /// Gets or sets the message.
+    /// </summary>
+    public string Message { get; set; }
 }

@@ -1,4 +1,4 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="IExifCleaner.cs" company="Hämmer Electronics">
 //   Copyright (c) All rights reserved.
 // </copyright>
@@ -7,35 +7,30 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace ExifRemove.Interfaces
-{
-    using System;
+namespace ExifRemove.Interfaces;
 
-    using ExifRemove.Events;
+/// <summary>
+/// The exif cleaner interface.
+/// </summary>
+public interface IExifCleaner
+{
+    /// <summary>
+    /// The exif clean completed event handler.
+    /// </summary>
+    event EventHandler<ExifCleanCompletedEventArgs> ExifCleanCompleted;
 
     /// <summary>
-    /// The exif cleaner interface.
+    /// The exif clean progress event handler.
     /// </summary>
-    public interface IExifCleaner
-    {
-        /// <summary>
-        /// The exif clean completed event handler.
-        /// </summary>
-        event EventHandler<ExifCleanCompletedEventArgs> ExifCleanCompleted;
+    event EventHandler<ExifCleanProgressEventArgs> ExifCleanProgress;
 
-        /// <summary>
-        /// The exif clean progress event handler.
-        /// </summary>
-        event EventHandler<ExifCleanProgressEventArgs> ExifCleanProgress;
+    /// <summary>
+    /// The exception thrown event handler.
+    /// </summary>
+    event EventHandler<ExceptionThrownEventArgs> ExceptionThrown;
 
-        /// <summary>
-        /// The exception thrown event handler.
-        /// </summary>
-        event EventHandler<ExceptionThrownEventArgs> ExceptionThrown;
-
-        /// <summary>
-        /// The start method.
-        /// </summary>
-        void Start();
-    }
+    /// <summary>
+    /// The start method.
+    /// </summary>
+    void Start();
 }
