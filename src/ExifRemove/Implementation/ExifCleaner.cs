@@ -116,9 +116,9 @@ public class ExifCleaner : IExifCleaner
     /// </summary>
     private void InitializeAndRunBackgroundWorker()
     {
-        this.backgroundWorker.DoWork += this.BackgroundWork;
-        this.backgroundWorker.ProgressChanged += this.BackgroundProgressChanged;
-        this.backgroundWorker.RunWorkerCompleted += this.BackgroundRunWorkerCompleted;
+        this.backgroundWorker.DoWork += this.BackgroundWork!;
+        this.backgroundWorker.ProgressChanged += this.BackgroundProgressChanged!;
+        this.backgroundWorker.RunWorkerCompleted += this.BackgroundRunWorkerCompleted!;
         this.backgroundWorker.RunWorkerAsync();
     }
 

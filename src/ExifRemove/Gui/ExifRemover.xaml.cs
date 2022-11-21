@@ -54,9 +54,9 @@ public partial class ExifRemover
             return;
         }
 
-        this.cleaner.ExifCleanCompleted += this.HandleCleanCompleted;
-        this.cleaner.ExifCleanProgress += this.HandleCleanProcess;
-        this.cleaner.ExceptionThrown += HandleExceptionThrown;
+        this.cleaner.ExifCleanCompleted += this.HandleCleanCompleted!;
+        this.cleaner.ExifCleanProgress += this.HandleCleanProcess!;
+        this.cleaner.ExceptionThrown += HandleExceptionThrown!;
     }
 
     /// <summary>
